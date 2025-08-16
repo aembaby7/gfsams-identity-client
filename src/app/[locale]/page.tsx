@@ -1,4 +1,6 @@
 // src/app/[locale]/page.tsx
+'use client';
+
 import { useTranslations } from 'next-intl';
 
 export default function HomePage() {
