@@ -13,16 +13,26 @@
     "success": "نجاح",
     "search": "بحث"
   },
-  "auth": {
-    "username": "اسم المستخدم",
-    "password": "كلمة المرور",
-    "email": "البريد الإلكتروني",
-    "forgotPassword": "نسيت كلمة المرور؟",
-    "rememberMe": "تذكرني",
-    "loginSuccess": "تم تسجيل الدخول بنجاح",
-    "loginError": "خطأ في تسجيل الدخول",
-    "logoutSuccess": "تم تسجيل الخروج بنجاح"
-  },
+ "auth": {
+    "signIn": {
+      "title": "تسجيل الدخول إلى حسابك",
+      "subtitle": "نظام إدارة الهوية GFSAMS",
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "أدخل اسم المستخدم",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "rememberMe": "تذكرني",
+      "forgotPassword": "هل نسيت كلمة المرور؟",
+      "submitButton": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "signUpLink": "إنشاء حساب"
+    },
+    "errors": {
+      "invalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة",
+      "signInFailed": "حدث خطأ أثناء تسجيل الدخول"
+    }
+  }
+,
   "navigation": {
     "home": "الرئيسية",
     "about": "من نحن",
@@ -37,5 +47,24 @@
     "maxLength": "يجب ألا يتجاوز {max} أحرف",
     "networkError": "خطأ في الشبكة",
     "serverError": "خطأ في الخادم"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "userInfo": "معلومات المستخدم",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "username": "اسم المستخدم",
+    "roles": "الأدوار",
+    "viewProfile": "عرض الملف الشخصي",
+    "signOut": "تسجيل الخروج"
+  },
+ "home": {
+    "title": "نظام إدارة الهوية GFSAMS",
+    "subtitle": "نظام آمن للمصادقة وإدارة المستخدمين",
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "dashboard": "لوحة التحكم",
+    "profile": "عرض الملف الشخصي",
+    "welcome": "مرحباً بعودتك"
   }
 }

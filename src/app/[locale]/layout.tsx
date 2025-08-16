@@ -1,10 +1,12 @@
 // src/app/[locale]/layout.tsx
+import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { getMessages } from 'next-intl/server';
+import AuthSessionProvider from '@/components/providers/SessionProvider';
 import { locales } from '@/i18n/config';
-import Providers from '@/components/providers/Providers';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default async function LocaleLayout({
   children,
@@ -13,34 +15,24 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // Await params (required in Next.js 15)
+  // Await the params as required in Next.js 15
   const { locale } = await params;
-  
-  // Validate locale
+  // Validate that the incoming locale is valid
   if (!locales.includes(locale as any)) {
     notFound();
   }
 
-  // Load messages directly
-  let messages;
-  try {
-    messages = (await import(`@/messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  // Load messages for the current locale
+  const messages = await getMessages();
 
   return (
-    <html 
-      lang={locale} 
-      dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
-    >
-      <body className="font-sans antialiased">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers locale={locale}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <body className={inter.className}>
+        <AuthSessionProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
-          </Providers>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </AuthSessionProvider>
       </body>
     </html>
   );
