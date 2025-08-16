@@ -1,6 +1,6 @@
 // src/app/[locale]/layout.tsx
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import { locales } from '@/i18n/config';
@@ -8,17 +8,20 @@ import Providers from '@/components/providers/Providers';
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  // Await params (required in Next.js 15)
+  const { locale } = await params;
+  
   // Validate locale
   if (!locales.includes(locale as any)) {
     notFound();
   }
 
-  // Load messages
+  // Load messages directly
   let messages;
   try {
     messages = (await import(`@/messages/${locale}.json`)).default;

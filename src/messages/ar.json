@@ -1,41 +1,41 @@
 {
-    "common": {
-      "welcome": "Welcome",
-      "login": "Login",
-      "logout": "Logout",
-      "submit": "Submit",
-      "cancel": "Cancel",
-      "save": "Save",
-      "delete": "Delete",
-      "edit": "Edit",
-      "loading": "Loading...",
-      "error": "Error",
-      "success": "Success",
-      "search": "Search"
-    },
-    "auth": {
-      "username": "Username",
-      "password": "Password",
-      "email": "Email",
-      "forgotPassword": "Forgot Password?",
-      "rememberMe": "Remember Me",
-      "loginSuccess": "Login successful",
-      "loginError": "Login error",
-      "logoutSuccess": "Logout successful"
-    },
-    "navigation": {
-      "home": "Home",
-      "about": "About",
-      "contact": "Contact",
-      "profile": "Profile",
-      "settings": "Settings"
-    },
-    "errors": {
-      "required": "This field is required",
-      "invalidEmail": "Invalid email address",
-      "minLength": "Must be at least {min} characters",
-      "maxLength": "Must not exceed {max} characters",
-      "networkError": "Network error",
-      "serverError": "Server error"
-    }
+  "common": {
+    "welcome": "مرحباً",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "submit": "إرسال",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "search": "بحث"
+  },
+  "auth": {
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "email": "البريد الإلكتروني",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "rememberMe": "تذكرني",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "loginError": "خطأ في تسجيل الدخول",
+    "logoutSuccess": "تم تسجيل الخروج بنجاح"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "البريد الإلكتروني غير صالح",
+    "minLength": "يجب أن يكون على الأقل {min} أحرف",
+    "maxLength": "يجب ألا يتجاوز {max} أحرف",
+    "networkError": "خطأ في الشبكة",
+    "serverError": "خطأ في الخادم"
   }
+}
