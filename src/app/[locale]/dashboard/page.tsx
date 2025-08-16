@@ -1,5 +1,6 @@
 // src/app/[locale]/dashboard/page.tsx
-import { getServerSession } from 'next-auth/next';
+import { auth } from "@/auth"
+
 import { authOptions } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
@@ -11,7 +12,7 @@ export default async function DashboardPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params;
-  const session = await getServerSession(authOptions);
+  const session = await auth()
   
   // This check is redundant if middleware is working, but good for safety
   if (!session) {

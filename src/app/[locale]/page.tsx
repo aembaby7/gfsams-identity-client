@@ -1,7 +1,7 @@
 // src/app/[locale]/page.tsx
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { getServerSession } from 'next-auth/next';
+import { auth } from "@/auth"
 import { authOptions } from '@/lib/auth';
 
 export default async function HomePage({
@@ -11,7 +11,7 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   const t = await getTranslations('home');
-  const session = await getServerSession(authOptions);
+  const session = await auth()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
