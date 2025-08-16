@@ -1,69 +1,30 @@
 {
-  "common": {
-    "welcome": "Welcome",
-    "login": "Login",
-    "logout": "Logout",
-    "submit": "Submit",
-    "cancel": "Cancel",
-    "save": "Save",
-    "delete": "Delete",
-    "edit": "Edit",
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "search": "Search"
-  },
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "profile": "Profile",
-    "settings": "Settings"
-  },
-  "errors": {
-    "required": "This field is required",
-    "invalidEmail": "Invalid email address",
-    "minLength": "Must be at least {min} characters",
-    "maxLength": "Must not exceed {max} characters",
-    "networkError": "Network error",
-    "serverError": "Server error"
-  },
-  "auth": {
-    "signIn": {
-      "title": "Sign in to your account",
-      "subtitle": "GFSAMS Identity Management System",
-      "username": "Username",
-      "usernamePlaceholder": "Enter your username",
-      "password": "Password",
-      "passwordPlaceholder": "Enter your password",
-      "rememberMe": "Remember me",
-      "forgotPassword": "Forgot your password?",
-      "submitButton": "Sign in",
-      "noAccount": "Don't have an account?",
-      "signUpLink": "Sign up"
+    "Metadata": {
+      "title": "GFSAMS Identity Client",
+      "description": "Identity management system"
     },
-    "errors": {
-      "invalidCredentials": "Invalid username or password",
-      "signInFailed": "An error occurred during sign in"
+    "HomePage": {
+      "welcome": "Welcome to GFSAMS Identity Client",
+      "authenticated": "You are logged in as {email}",
+      "notAuthenticated": "Please log in to continue"
+    },
+    "Navigation": {
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "profile": "Profile",
+      "settings": "Settings",
+      "login": "Log In",
+      "logout": "Log Out"
+    },
+    "Auth": {
+      "signIn": "Sign In",
+      "signOut": "Sign Out",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up",
+      "invalidCredentials": "Invalid email or password"
     }
-  },
-  "dashboard": {
-    "title": "Dashboard",
-    "userInfo": "User Information",
-    "name": "Name",
-    "email": "Email",
-    "username": "Username",
-    "roles": "Roles",
-    "viewProfile": "View Profile",
-    "signOut": "Sign Out"
-  },
-  "home": {
-    "title": "GFSAMS Identity Management",
-    "subtitle": "Secure authentication and user management system",
-    "signIn": "Sign In",
-    "signUp": "Sign Up",
-    "dashboard": "Go to Dashboard",
-    "profile": "View Profile",
-    "welcome": "Welcome back"
   }
-}

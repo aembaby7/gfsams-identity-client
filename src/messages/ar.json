@@ -1,70 +1,30 @@
 {
-  "common": {
-    "welcome": "مرحباً",
-    "login": "تسجيل الدخول",
-    "logout": "تسجيل الخروج",
-    "submit": "إرسال",
-    "cancel": "إلغاء",
-    "save": "حفظ",
-    "delete": "حذف",
-    "edit": "تعديل",
-    "loading": "جاري التحميل...",
-    "error": "خطأ",
-    "success": "نجاح",
-    "search": "بحث"
-  },
- "auth": {
-    "signIn": {
-      "title": "تسجيل الدخول إلى حسابك",
-      "subtitle": "نظام إدارة الهوية GFSAMS",
-      "username": "اسم المستخدم",
-      "usernamePlaceholder": "أدخل اسم المستخدم",
-      "password": "كلمة المرور",
-      "passwordPlaceholder": "أدخل كلمة المرور",
-      "rememberMe": "تذكرني",
-      "forgotPassword": "هل نسيت كلمة المرور؟",
-      "submitButton": "تسجيل الدخول",
-      "noAccount": "ليس لديك حساب؟",
-      "signUpLink": "إنشاء حساب"
+    "Metadata": {
+      "title": "عميل هوية GFSAMS",
+      "description": "نظام إدارة الهوية"
     },
-    "errors": {
-      "invalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة",
-      "signInFailed": "حدث خطأ أثناء تسجيل الدخول"
+    "HomePage": {
+      "welcome": "مرحباً بك في عميل هوية GFSAMS",
+      "authenticated": "لقد سجلت الدخول كـ {email}",
+      "notAuthenticated": "يرجى تسجيل الدخول للمتابعة"
+    },
+    "Navigation": {
+      "home": "الرئيسية",
+      "dashboard": "لوحة التحكم",
+      "profile": "الملف الشخصي",
+      "settings": "الإعدادات",
+      "login": "تسجيل الدخول",
+      "logout": "تسجيل الخروج"
+    },
+    "Auth": {
+      "signIn": "تسجيل الدخول",
+      "signOut": "تسجيل الخروج",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "rememberMe": "تذكرني",
+      "forgotPassword": "نسيت كلمة المرور؟",
+      "noAccount": "ليس لديك حساب؟",
+      "signUp": "إنشاء حساب",
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
     }
   }
-,
-  "navigation": {
-    "home": "الرئيسية",
-    "about": "من نحن",
-    "contact": "اتصل بنا",
-    "profile": "الملف الشخصي",
-    "settings": "الإعدادات"
-  },
-  "errors": {
-    "required": "هذا الحقل مطلوب",
-    "invalidEmail": "البريد الإلكتروني غير صالح",
-    "minLength": "يجب أن يكون على الأقل {min} أحرف",
-    "maxLength": "يجب ألا يتجاوز {max} أحرف",
-    "networkError": "خطأ في الشبكة",
-    "serverError": "خطأ في الخادم"
-  },
-  "dashboard": {
-    "title": "لوحة التحكم",
-    "userInfo": "معلومات المستخدم",
-    "name": "الاسم",
-    "email": "البريد الإلكتروني",
-    "username": "اسم المستخدم",
-    "roles": "الأدوار",
-    "viewProfile": "عرض الملف الشخصي",
-    "signOut": "تسجيل الخروج"
-  },
- "home": {
-    "title": "نظام إدارة الهوية GFSAMS",
-    "subtitle": "نظام آمن للمصادقة وإدارة المستخدمين",
-    "signIn": "تسجيل الدخول",
-    "signUp": "إنشاء حساب",
-    "dashboard": "لوحة التحكم",
-    "profile": "عرض الملف الشخصي",
-    "welcome": "مرحباً بعودتك"
-  }
-}

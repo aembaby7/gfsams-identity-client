@@ -1,39 +1,39 @@
 // src/app/[locale]/layout.tsx
-import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import AuthSessionProvider from '@/components/providers/SessionProvider';
-import { locales } from '@/i18n/config';
+import { notFound } from 'next/navigation'
+import { ReactNode } from 'react'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
-const inter = Inter({ subsets: ['latin'] });
+const locales = ['en', 'ar'] // Add your supported locales
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
+interface LocaleLayoutProps {
+  children: ReactNode
+  params: Promise<{ locale: string }>
+}
 
 export default async function LocaleLayout({
   children,
   params
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  // Await the params as required in Next.js 15
-  const { locale } = await params;
-  // Validate that the incoming locale is valid
-  if (!locales.includes(locale as any)) {
-    notFound();
+}: LocaleLayoutProps) {
+  const { locale } = await params
+  
+  // Validate locale
+  if (!locales.includes(locale)) {
+    notFound()
   }
 
-  // Load messages for the current locale
-  const messages = await getMessages();
+  // Get messages for the locale
+  const messages = await getMessages()
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={inter.className}>
-        <AuthSessionProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </AuthSessionProvider>
-      </body>
-    </html>
-  );
+    <NextIntlClientProvider messages={messages}>
+      <div lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+        {children}
+      </div>
+    </NextIntlClientProvider>
+  )
 }
